@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Angular7-unit-testing!';
 
+  emoji: string;
+
+  onClick() {
+    this.emoji = '😜';
+  }
+
   constructor() {}
   ngOnInit() {}
 }

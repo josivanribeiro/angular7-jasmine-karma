@@ -76,5 +76,18 @@ describe('App component', () => {
       expect(compile.querySelector('#btnDesabilitado').textContent).toContain('Desabilitado');      
     }));
 
+    it('should set 😜 on click', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+    
+      const h1 = fixture.debugElement.query(By.css('h2'));
+      h1.triggerEventHandler('click', {});
+      fixture.detectChanges();
+    
+      expect(
+        fixture.debugElement.query(By.css('h2')).nativeElement.innerText
+      ).toEqual('😜');
+    });
+
   });
 });
